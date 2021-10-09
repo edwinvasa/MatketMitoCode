@@ -1,11 +1,15 @@
 package com.mitocode.market.marketmitocode.dto;
 
+import javax.validation.constraints.Size;
+
 public class PersonaDto {
 
     private Integer idPersona;
 
+    @Size(min = 3, max = 16, message = "{nombre.size}")
     private String nombres;
 
+    @Size(min = 3, max = 16, message = "{apellidos.size}")
     private String apellidos;
 
     public Integer getIdPersona() {

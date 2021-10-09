@@ -1,11 +1,18 @@
 package com.mitocode.market.marketmitocode.dto;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class ProductoDto {
 
     private Integer idProducto;
 
+    @NotNull
+    @Size(min = 3, max = 16, message = "{nombre.size}")
     private String nombre;
 
+    @NotNull
+    @Size(min = 3, max = 16, message = "{marca.size}")
     private String marca;
 
     public Integer getIdProducto() {

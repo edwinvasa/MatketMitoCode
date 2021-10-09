@@ -1,6 +1,7 @@
 package com.mitocode.market.marketmitocode.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Producto {
@@ -10,8 +11,10 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProducto;
 
+    @NotNull
     private String nombre;
 
+    @NotNull
     private String marca;
 
     public Integer getIdProducto() {
